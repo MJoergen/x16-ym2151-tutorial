@@ -1,5 +1,9 @@
 # Episode 3 - Playing music!
-In this episode we will be controlling multiple channels simultaneously.
+In this episode we will be controlling multiple channels simultaneously in
+order to create music with melody and chords. The accompanying
+[program](tutorial3.bas) is considerably longer than the previous examples, but
+may be used as a template for your own programs.
+
 The YM2151 has eight independent channels (numbered 0 - 7), but the addressing
 of these channels is somewhat convoluted. For most registers the lowest three
 address bits determine the channel number. So for instance, the Key Code selector

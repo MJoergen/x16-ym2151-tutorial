@@ -37,7 +37,7 @@ $E0 (maximum Release Rate, and maximum Sustain Attentuation).
 POKE $9FE0, $80: POKE $9FE1, $1F
 POKE $9FE0, $E0: POKE $9FE1, $FF
 ```
-Those were exactly the values used in [../Episode_1](Episode 1) of the tutorial.
+Those were exactly the values used in [Episode 1](../Episode_1) of the tutorial.
 
 To send the "Key On" event write the value $08 to address $08:
 ```
