@@ -93,10 +93,8 @@ representation:
 * An empty string means the note continues from the previous line.
 
 The above representation requires some processing to convert each note into
-equivalent writes to the YM2151.
-
-First of all, reading each line of the musical score takes place in lines
-1500-1580. 
+equivalent writes to the YM2151.  First of all, reading each line of the
+musical score takes place in lines 1500-1580. 
 ```
 1500 NT=TI+2
 1510 IF TI<>NT THEN GOTO 1510
@@ -109,13 +107,12 @@ First of all, reading each line of the musical score takes place in lines
 1580 GOTO 1510
 ```
 
-The variable TI is the jiffie counter, which automatically
-increments 60 times a second. The variable NT denotes when to proceed to the
-next line, and this is updated in line 1570. In other words, this is where the
-pace of the music is controlled.
-
-Lines 1520-1560 loop over the four channels, and checks whether a new note is
-to be processed, in which case it jumps to the routine in lines 1600-1670:
+The system variable TI is the jiffie counter, which automatically increments 60
+times a second. The variable NT denotes when to proceed to the next line, and
+this is updated in line 1570. In other words, this is where the pace of the
+music is controlled.  Lines 1520-1560 loop over the four channels, and checks
+whether a new note is to be processed, in which case it jumps to the routine in
+lines 1600-1670:
 ```
 1600 REM THIS PLAYS THE NOTE IN N$ ON CHANNEL C.
 1610 K=ASC(N$)-ASC("A")                         : REM SEMITONE
@@ -136,5 +133,7 @@ corresponding key code for the YM2151. Finally, the note C is special in that
 the YM2151 considers it to belong to a previous octave, and therefore we must
 decrement the octave number in line 1630.
 
-And that is it! You can now program the YM2151 to play any tune you like.
+And that is it! You can now program the YM2151 to play any tune you like.  All
+you need to do is to change the contents of the DATA statements from line 2000
+onwards, and possibly the channel configuration in lines 1000-1310.
 
