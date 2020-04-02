@@ -1,6 +1,6 @@
 # YM2151 Tutorial
 
-This is a tutorial on how to get started making music on a YM2151. 
+This is a tutorial on how to get started using the YM2151 to make music on the Commander X16.
 
 ## Overview of the YM2151 synthesizer
 
